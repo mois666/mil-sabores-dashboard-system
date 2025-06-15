@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,6 +10,10 @@ import Login from "@/pages/Login";
 import Dashboard from "@/pages/Dashboard";
 import Usuarios from "@/pages/Usuarios";
 import NotFound from "@/pages/NotFound";
+import Clientes from "@/pages/Clientes";
+import Productos from "@/pages/Productos";
+import Ventas from "@/pages/Ventas";
+import Ganancias from "@/pages/Ganancias";
 
 const queryClient = new QueryClient();
 
@@ -57,10 +60,7 @@ const AppRoutes = () => {
       <Route path="/clientes" element={
         <ProtectedRoute>
           <DashboardLayout>
-            <div className="p-8 text-center">
-              <h1 className="text-2xl font-bold mb-4">Gestión de Clientes</h1>
-              <p className="text-gray-600">Módulo en desarrollo</p>
-            </div>
+            <Clientes />
           </DashboardLayout>
         </ProtectedRoute>
       } />
@@ -68,10 +68,7 @@ const AppRoutes = () => {
       <Route path="/productos" element={
         <ProtectedRoute>
           <DashboardLayout>
-            <div className="p-8 text-center">
-              <h1 className="text-2xl font-bold mb-4">Gestión de Productos</h1>
-              <p className="text-gray-600">Módulo en desarrollo</p>
-            </div>
+            <Productos />
           </DashboardLayout>
         </ProtectedRoute>
       } />
@@ -79,10 +76,7 @@ const AppRoutes = () => {
       <Route path="/ventas" element={
         <ProtectedRoute>
           <DashboardLayout>
-            <div className="p-8 text-center">
-              <h1 className="text-2xl font-bold mb-4">Registro de Ventas</h1>
-              <p className="text-gray-600">Módulo en desarrollo</p>
-            </div>
+            <Ventas />
           </DashboardLayout>
         </ProtectedRoute>
       } />
@@ -90,10 +84,7 @@ const AppRoutes = () => {
       <Route path="/ganancias" element={
         <ProtectedRoute>
           <DashboardLayout>
-            <div className="p-8 text-center">
-              <h1 className="text-2xl font-bold mb-4">Módulo de Ganancias</h1>
-              <p className="text-gray-600">Módulo en desarrollo</p>
-            </div>
+            <Ganancias />
           </DashboardLayout>
         </ProtectedRoute>
       } />
